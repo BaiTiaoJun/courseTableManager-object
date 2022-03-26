@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程表增加页面</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/CouTableModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/ctbTime.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <script type="text/javascript" src="js/CourseTableInsert.js"></script>
+    <style type="text/css">
+        #ctbSite {
+            width: 15%;
+        }
+        #ctbTeaNo {
+            width: 19%;
+        }
+        #ctbClassNo {
+            width: 23%;
+        }
+        .ctbTimeSessionNo {
+            width: 17%;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+  <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+  <div class="left"></div>
+  <div class="right">
+    <font>课程号：</font>
+    <select id="ctbCouNo"></select><br>
+    <font>班级号：</font>
+      <select id="ctbClassNo"></select><br>
+    <font>授课老师编号：</font>
+      <select id="ctbTeaNo"></select><br>
+    <font>授课时间：</font>
+    <select class="ctbTimeWeek"></select>
+    <select class="ctbTimeWhatDay"></select>
+    <select class="ctbTimeSessionNo"></select><br>
+    <font>授课地点：</font>
+        <select id="ctbSite"></select><br>
+    <input class="submitCtb" type="submit" value="提交">
+    <input class="reset" type="reset" value="重置">
+  </div>
+</section>
+</body>
+</html>

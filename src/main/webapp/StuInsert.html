@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生增加界面</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/StuModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/dateSelected.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <script type="text/javascript" src="js/CourseTableInsert.js"></script>
+    <style type="text/css">
+        .infoPage .right .in {
+            margin-top: 2rem;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('.reset').on("click", function () {
+                location.href = "StuInsert.html";
+            })
+            $('.submitStu').on("click", function () {
+                let stuId = $('#stuId').val();
+                let stuName = $('#stuName').val();
+                let sex = $(':radio:checked').val();
+                let selYear = $('.selYear').val();
+                let selMonth = $('.selMonth').val();
+                let selDay = $('.selDay').val();
+                let dept = $('#dept').val();
+                let sclass = $('#ctbClassNo').val();
+                let addr = $('#addr').val();
+                let contact = $('#contact').val();
+                if (stuId !== "" && stuName !== "" && sex !== "" && selYear !== "" && selMonth !== "" && selDay !== "" && dept !== "" && sclass !== "" && addr !== "" && contact !== "") {
+                    let data = "stuId=" + stuId + "&stuName=" + stuName + "&sex=" + sex + "&selYear=" + selYear + "&selMonth=" + selMonth +
+                        "&selDay=" + selDay + "&dept=" + dept + "&sclass=" + sclass + "&addr=" + addr + "&contact=" + contact;
+                    doAjaxInsert(data, "StuInsert.html", "已经存在此老师！");
+                } else {
+                    alert("请输入完整的学生信息！");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<header class="header">
+    <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+    <div class="left"></div>
+    <div class="right">
+        <font>学号：</font><input type="text" id="stuId" class="in"><br>
+        <font>姓名：</font><input type="text" id="stuName" class="in"><br>
+        <font>性别：</font>
+        <input class="selSex" id="male" name="sex" type="radio" value="男" checked><font class="fontman">男</font>
+        <input class="selSex" id="female" name="sex" type="radio" value="女"><font class="fontwomen">女</font><br>
+        <font>出生年月日：</font>
+        <select class="selYear" id="year"></select>
+        <select class="selMonth" id="month"></select>
+        <select class="selDay" id="day"></select><br>
+        <font>学院：</font>
+        <select id="dept" style="width: 30%">
+            <option>计算机与科学学院</option>
+            <option>管理学院</option>
+            <option>外语学院</option>
+            <option>园林学院</option>
+            <option>机械学院</option>
+            <option>生物与化学学院</option>
+            <option>艺术学院</option>
+            <option>建筑学院</option>
+        </select><br>
+        <font>班级：</font>
+        <select id="ctbClassNo" style="width: 23%"></select><br>
+        <font>地址：</font><input type="text" id="addr" class="in"><br>
+        <font>联系：</font><input type="text" id="contact" class="in"><br>
+        <input class="submitStu" type="submit" value="提交">
+        <input class="reset" type="reset" value="重置">
+    </div>
+</section>
+</body>
+</html>

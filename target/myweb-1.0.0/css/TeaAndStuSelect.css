@@ -1,0 +1,98 @@
+.header .xg {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 92%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .kcb {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 85%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .exit {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    margin: -6.5rem 0 0 81%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.header .xg:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.header .kcb:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.header .exit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.box {
+    display: flex;
+    overflow: hidden;
+    width: 90rem;
+    height: 40rem;
+    margin: 10% auto;
+}
+
+.box .left {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    border-radius: 0.3rem;
+    opacity: 85%;
+    background-color: rgba(255,255,255,50%);
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 15%);
+    font-size: 1.8rem;
+    text-align: left;
+    padding: 3.5rem 0 0 4rem;
+}
+
+.box .left p {
+    margin-top: 1.5rem;
+}
+
+.box .left font {
+    opacity: 60%;
+}
+
+.box .right {
+    display: flex;
+    width: 28%;
+    margin: 0 0 0 2%;
+    border-radius: 0.3rem;
+    opacity: 85%;
+    background-color: rgba(255,255,255,50%);
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 15%);
+}
+
+.header h5 {
+    color: rgb(144,129,241);
+    font-size: 3rem;
+    margin: 2rem auto;
+}
+

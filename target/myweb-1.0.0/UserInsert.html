@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户增加界面</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/UserModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <style type="text/css">
+      .infoPage .right .in {
+        margin-top: 10rem;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function () {
+        $('.reset').on("click", function () {
+          location.href = "UserInsert.html";
+        })
+        $('.submitUser').on("click", function () {
+              let user = $('#user').val();
+              let pass = $('#pass').val();
+              let type = $('#type').val();
+              if (user !== "" && pass !== "" && type !== "") {
+                  let data = "user=" + user + "&pass=" + pass + "&type=" + type;
+                  if (pass.length < 6) {
+                      alert("请输入至少六位长度的密码！");
+                  } else {
+                      doAjaxInsert(data, "UserInsert.html", "已经存在此用户！");
+                  }
+              } else {
+                  alert("请输入完整的用户信息！");
+              }
+          })
+      })
+    </script>
+</head>
+<body>
+<header class="header">
+  <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+  <section class="infoPage">
+    <div class="left"></div>
+    <div class="right">
+      <font>用户：</font><input type="text" id="user" class="in"><br>
+      <font>密码：</font><input type="text" class="in" id="pass"><br>
+      <font>用户类别：</font>
+      <select class="selType" id="type" style="margin-top: 12rem">
+        <option id="学生">学生</option>
+        <option id="老师">老师</option>
+        <option id="管理员">管理员</option>
+      </select>
+      <input class="submitUser" type="submit" value="提交" style="margin-top: 10rem">
+      <input class="reset" type="reset" value="重置">
+    </div>
+  </section>
+</body>
+</html>

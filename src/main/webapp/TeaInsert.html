@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老师增加界面</title>
+  <link rel="stylesheet" href="css/Modify.css">
+  <link rel="stylesheet" href="css/TeaModify.css">
+  <link rel="stylesheet" href="css/HeaderAndBackground.css">
+  <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+  <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+  <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+  <style type="text/css">
+    select {
+      width: 30%;
+      height: 3rem;
+      font-size: 2rem;
+      margin-top: 7rem;
+      border-radius: 2%;
+      background-color: rgba(0,0,0,0);
+      border-color: rgb(144,129,241);
+      color: #3d3d3d;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function () {
+      $('.reset').on("click", function () {
+        location.href = "TeaInsert.html";
+      })
+      $('.submitTea').on("click", function () {
+        let teaNo = $('#teaNo').val();
+        let teaName = $('#teaName').val();
+        let deptOption = $('#deptOption').val();
+        let majorOption = $('#majorOption').val();
+        let levelOption = $('#levelOption').val();
+        if (teaNo !== "" && teaName !== "" && deptOption !== "" && majorOption !== "" && levelOption !== "") {
+          let data = "teaNo=" + teaNo + "&teaName=" + teaName + "&deptOption=" + deptOption + "&majorOption=" + majorOption + "&levelOption=" + levelOption;
+          doAjaxInsert(data, "TeaInsert.html", "已经存在此学生！");
+        } else {
+          alert("请输入完整的老师信息！");
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+<header class="header">
+  <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+  <div class="left"></div>
+  <div class="right">
+    <font>教工编号：</font><input type="text" id="teaNo" class="in" style="width: 64%"><br>
+    <font>姓名：</font><input class="in" id="teaName" type="text" style="margin-top: 3rem"><br>
+    <font>院系：</font>
+    <select id="deptOption" style="width: 36%">
+      <option>计算机与科学学院</option>
+      <option>管理学院</option>
+      <option>外语学院</option>
+      <option>园林学院</option>
+      <option>机械学院</option>
+      <option>生物与化学学院</option>
+      <option>艺术学院</option>
+      <option>建筑学院</option>
+    </select><br>
+    <font>专业方向：</font>
+    <select id="majorOption">
+      <option>python</option>
+      <option>数据库原理与技术</option>
+      <option>软件设计</option>
+      <option>计算机网络</option>
+      <option>java</option>
+      <option>android</option>
+      <option>javasScript</option>
+      <option>计算机基础</option>
+      <option>jsp</option>
+      <option>大学英语</option>
+      <option>高数</option>
+      <option>ios</option>
+      <option>c++</option>
+    </select><br>
+    <font>职称：</font>
+    <select id="levelOption" style="width: 36%">
+      <option>正高级教师</option>
+      <option>高级教师</option>
+      <option>一级教师</option>
+      <option>二级教师</option>
+      <option>三级教师</option>
+    </select><br>
+    <input class="submitTea" type="submit" value="提交" id="margin-top: 7.5rem">
+    <input class="reset" type="reset" value="重置">
+  </div>
+</section>
+</body>
+</html>

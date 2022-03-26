@@ -1,0 +1,68 @@
+.infoPage .right .in {
+    outline: none;
+    width: 70%;
+    height: 7rem;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    padding: 3.5rem 0 0 1.6rem;
+    border: none;
+    border-bottom: 1px solid rgb(144,129,241);
+    background-color: rgba(0,0,0,0);
+}
+
+font {
+    color: #3d3d3d;
+    font-size: 2rem;
+}
+
+#classDept {
+    width: 73%;
+}
+
+#classStuNum {
+    width: 67%;
+}
+
+select {
+    width: 16%;
+    height: 3rem;
+    font-size: 2rem;
+    margin-top: 6rem;
+    border-radius: 2%;
+    background-color: rgba(0,0,0,0);
+    border-color: rgb(144,129,241);
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+.right .submitClassBase {
+    width: 25%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 9rem 0 0 10%;
+    cursor: pointer;
+}
+
+.right .reset {
+    width: 25%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 9rem 0 0 15%;
+    cursor: pointer;
+}
+
+.right .submitClassBase:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.right .reset:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}

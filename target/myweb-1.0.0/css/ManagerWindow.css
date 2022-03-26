@@ -1,0 +1,115 @@
+.right {
+    position: relative;
+    width: 82%;
+    background-color: rgba(255,255,255,50%);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 20%);
+    display: none;
+}
+
+.showBox {
+    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #4b4b4b;
+    border-radius: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 6px 6px 12px;
+    width: 100%;
+    margin-left: -0.2rem;
+    margin-top: 2rem;
+}
+
+.showBox tr:first-child {
+    font-weight: bold;
+    height: 5rem;
+}
+
+.showBox tr td {
+    background: #ffffff;
+    font-size:15px;
+    color: #393939;
+    text-align: center;
+}
+
+.showBox tr td input {
+    width: 8.4rem;
+    height: 4rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc 100%);
+    flex-direction: column;
+    border-radius: 0.8rem;
+    border: none;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    transition: 0.4s;
+    padding: 1rem 0 0 2.8rem;
+    cursor: pointer;
+}
+
+.showBox tr td input:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 33%);
+}
+
+.search {
+    position: absolute;
+    bottom: 3.5rem;
+    width: 300px;
+    margin: 0 0 0 40%;
+}
+
+.search a {
+    font-size: 2rem;
+    color: #5e5e5e;
+}
+
+.search .nextpage {
+    margin-left: 2%;
+}
+
+.search .skip {
+    margin-left: 1%;
+}
+
+.search input {
+    width: 6rem;
+    height: 2.3rem;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+
+.search font {
+    font-size: 2rem;
+}
+
+.searchText {
+    margin: 5rem 0 0 5%;
+    width: 20%;
+    height: 3.5rem;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(144,129,241, 80%);
+    outline: none;
+    padding: 0rem 1rem 0 0rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgba(0,0,0,70%);
+}
+
+.searchBtn {
+    width: 8.4rem;
+    height: 4rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc 100%);
+    flex-direction: column;
+    border-radius: 4rem;
+    border: none;
+    margin: 1.5rem 0.5rem 0rem 1.5rem;
+    font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    padding: 1rem 0 0 2.8rem;
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 20%);
+}

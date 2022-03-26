@@ -1,0 +1,94 @@
+.header .xg {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 92%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .xg:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.header .user {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 85%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .user:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.box {
+    display: flex;
+    width: 100rem;
+    height: 110rem;
+    margin: 2% auto;
+    overflow: hidden;
+    background-color: rgba(255,255,255,50%);
+}
+
+.tb {
+    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #4b4b4b;
+    border-radius: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 6px 6px 8px;
+    width: 100%;
+}
+
+.tb tr td {
+    opacity: 60%;
+    background: #ffffff;
+    font-size:15px;
+    color: #000000;
+    text-align: center;
+    width: 10rem;
+}
+
+.base h5 {
+    color: rgb(144,129,241);
+    font-size: 3rem;
+    margin: 2rem auto;
+}
+
+.header select {
+    border: none;
+    width: 7%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 77%;
+    text-align: center;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header select option {
+    font-size: 1.5rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    cursor: pointer;
+}
+
+.header select:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}

@@ -1,0 +1,112 @@
+.header h5 {
+    color: rgb(101, 101, 101);
+    font-size: 1.5rem;
+    margin: 3.0rem 0 0 85%;
+    position: absolute;
+}
+
+.header .dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: chartreuse;
+    margin: 3.3rem 0 0 83.9%;
+    border-radius: 50%;
+}
+
+section {
+    display: flex;
+    padding: 0 10%;
+    margin: 2% 0 5% 0;
+    height: 95rem;
+}
+
+.box {
+    display: flex;
+    width: 25rem;
+    height: 38.3rem;
+    background-color: rgba(255,255,255,50%);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 20%);
+    margin-right: 40px;
+}
+
+.box ul {
+    list-style: none;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.box ul>li {
+    color: #8ec5fc;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.box ul>li:nth-child(-n+7) {
+    border-bottom: 0.1rem solid #b6b6b6;
+}
+
+li:hover{
+    background-color: rgba(255,255,255,40%);
+}
+
+.font {
+    top: 18%;
+    z-index: -1;
+    position: relative;
+    margin: 0 0 0 30%;
+}
+
+.font h5 {
+    color: rgb(144,129,241);
+    font-size: 3rem;
+}
+
+hr {
+    border: 0px;
+    width: 98%;
+    border-bottom: 1px solid rgb(207 199 255);
+    margin: 2rem auto;
+}
+.insertWrap{
+    position: absolute;
+    right: 50px;
+    top: 47px;
+}
+.insert {
+    width: 8.4rem;
+    height: 4rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc, #8ec5fc 100%);
+    flex-direction: column;
+    border-radius: 4rem;
+    border: none;
+    font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    padding: 1rem 0 0 1.3rem;
+    cursor: pointer;
+}
+
+.insert:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 20%);
+}
+
+.exit {
+    width: 6%;
+    height: 5rem;
+    color: #f6f6f6;
+    background: #78a4ff;
+    border-radius: 0.8rem;
+    border: none;
+    margin: 1.5rem 0.5rem 0rem 92%;
+    font: bold 18px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    transition: 0.2s;
+    cursor: pointer;
+    position: absolute;
+}
+
+.exit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 20%);
+}

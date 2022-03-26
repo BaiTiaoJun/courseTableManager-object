@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程基本信息</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/CouBaseModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('.reset').on("click", function () {
+          location.href = "CourseBaseInsert.html";
+        })
+        $('.submitCb').on("click", function () {
+          let couNo = $('#couNo').val();
+          let couName = $('#couName').val();
+          let couTerm = $('#couTerm').val();
+          let couPeriod = $('#couPeriod').val();
+          let couCredit = $('#couCredit').val();
+          if (couNo !== "" && couName !== "" && couTerm !== "" && couPeriod !== "" && couCredit !== "") {
+            let data = "couNo=" + couNo + "&couName=" + couName + "&couTerm=" + couTerm + "&couPeriod=" + couPeriod + "&couCredit=" + couCredit;
+            doAjaxInsert(data, "CourseBaseInsert.html", "课程号已存在！");
+          } else {
+            alert("请输入完整的课程基本信息！");
+          }
+        })
+      })
+    </script>
+</head>
+<body>
+<header class="header">
+  <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+  <div class="left"></div>
+  <div class="right">
+    <font>课程号：</font><input id="couNo" type="text" class="in"><br>
+    <font>课程名：</font>
+    <select id="couName" style="width: 30%">
+      <option>python</option>
+      <option>数据库原理与技术</option>
+      <option>软件设计</option>
+      <option>计算机网络</option>
+      <option>java</option>
+      <option>android</option>
+      <option>javasScript</option>
+      <option>计算机基础</option>
+      <option>jsp</option>
+      <option>大学英语</option>
+      <option>高数</option>
+      <option>ios</option>
+      <option>c++</option>
+    </select><br>
+    <font>开课学期：</font>
+    <select id="couTerm" style="width: 20%">
+      <option id="第一学期">第一学期</option>
+      <option id="第二学期">第二学期</option>
+      <option id="第三学期">第三学期</option>
+      <option id="第四学期">第四学期</option>
+      <option id="第五学期">第五学期</option>
+      <option id="第六学期">第六学期</option>
+      <option id="第七学期">第七学期</option>
+      <option id="第八学期">第八学期</option>
+      <option id="第九学期">第九学期</option>
+    </select><br>
+    <font>学时：</font>
+    <select id="couPeriod" style="text-align: center">
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+    </select><br>
+    <font>学分：</font>
+    <select id="couCredit" style="text-align: center">
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+    </select><br>
+    <input class="submitCb" type="submit" value="提交">
+    <input class="reset" type="reset" value="重置">
+  </div>
+</section>
+</body>
+</html>

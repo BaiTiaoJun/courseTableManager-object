@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教室增加界面</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/ClassroomModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.reset').on("click", function () {
+                location.href = "ClassroomInsert.html";
+            })
+            $('.submitClassroom').on("click", function () {
+                let classroomNo = $('#classroomNo').val();
+                let capacity = $('#capacity').val();
+                let isMul = $('.isMul:checked').val();
+                let isUse = $('.isUse:checked').val();
+                if (classroomNo !== "" && capacity !== "" && isMul !== "" && isUse !== "") {
+                    let data = "classroomNo=" + classroomNo + "&capacity=" + capacity + "&isMul=" + isMul + "&isUse=" + isUse;
+                    doAjaxInsert(data, "ClassroomInsert.html", "教室编号已存在！");
+                } else {
+                    alert("请输入完整的教室信息！");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<header class="header">
+    <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+    <div class="left"></div>
+    <div class="right">
+        <font>教室编号：</font><input type="text" id="classroomNo" class="in"><br>
+        <font>容量：</font><input type="text" class="in" id="capacity" style="width: 76%"><br>
+        <font>是否是多媒体教室：</font>
+        <input type="radio" name="isMulClassroom" class="isMul" value="1" checked>是
+        <input type="radio" name="isMulClassroom" class="isMul" id="false" value="0">不是<br>
+        <font>教室状态：</font>
+        <input type="radio" name="classroomStatus" class="isUse" id="use" value="使用" checked>使用
+        <input type="radio" name="classroomStatus" class="isUse" id="inuse" value="空闲">空闲<br>
+        <input class="submitClassroom" type="submit" value="提交">
+        <input class="reset" type="reset" value="重置">
+    </div>
+</section>
+</body>
+</html>

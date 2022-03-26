@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级基本信息</title>
+    <link rel="stylesheet" href="css/Modify.css">
+    <link rel="stylesheet" href="css/ClassBaseModify.css">
+    <link rel="stylesheet" href="css/HeaderAndBackground.css">
+    <script type="text/javascript" src="js/jQuery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/returnManagerSelectJsp.js"></script>
+    <script type="text/javascript" src="js/dateSelected.js"></script>
+    <script type="text/javascript" src="js/doAjaxInsert.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('.reset').on("click", function () {
+          location.href = "ClassBaseInsert.html";
+        })
+          $('.submitClassBase').on("click", function () {
+              let classNo = $('#classNo').val();
+              let classDept = $('#classDept').val();
+              let classStuNum = $('#classStuNum').val();
+              let selYear = $('.selYear').val();
+              let selMonth = $('.selMonth').val();
+              let selDay = $('.selDay').val();
+              let instructor = $('#instructor').val();``
+              if (classNo !== "" && classDept !== "" && classDept !== "" && selYear !== "" && selMonth !== "" && selDay !== "" && instructor !== "") {
+                  let data = "classNo=" + classNo + "&classDept=" + classDept + "&classStuNum=" + classStuNum + "&selYear=" + selYear + "&selMonth=" + selMonth
+                   + "&selDay=" + selDay + "&instructor=" + instructor;
+                  doAjaxInsert(data, "ClassBaseInsert.html", "已经存在班级号相同的班级信息！");
+              } else {
+                  alert("请输入完整的班级基本信息！");
+              }
+          })
+      })
+    </script>
+</head>
+<body>
+<header class="header">
+  <input type="button" class="managerPage" value="返回管理员首页">
+</header>
+<section class="infoPage">
+  <div class="left"></div>
+  <div class="right">
+    <font>班级号：</font><input type="text" id="classNo" class="in"><br>
+    <font>院系：</font>
+    <select id="classDept" style="width: 20rem">
+      <option>计算机与科学学院</option>
+      <option>管理学院</option>
+      <option>外语学院</option>
+      <option>园林学院</option>
+      <option>机械学院</option>
+      <option>生物与化学学院</option>
+      <option>艺术学院</option>
+      <option>建筑学院</option>
+    </select><br>
+    <font>班级人数：</font><input class="in" type="text" id="classStuNum"><br>
+    <font>入学年份：</font>
+    <select class="selYear"></select>
+    <select class="selMonth"></select>
+    <select class="selDay"></select><br>
+    <font>辅导员：</font><input id="instructor" class="in" type="text"><br>
+    <input class="submitClassBase" type="submit" value="提交">
+    <input class="reset" type="reset" value="重置">
+  </div>
+</section>
+</body>
+</html>

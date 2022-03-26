@@ -1,0 +1,63 @@
+.header .managerPage {
+    border: none;
+    width: 7%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 2rem 0 0 92%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .managerPage:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.infoPage {
+    display: flex;
+    overflow: hidden;
+    width: 120rem;
+    height: 70rem;
+    margin: 5% auto;
+    opacity: 85%;
+    background-color: rgba(255,255,255,50%);
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 15%);
+    font-size: 2rem;
+    border-radius: 0.8rem;
+}
+
+.infoPage .right {
+    width: 55%;
+    align-items: center;
+}
+
+.infoPage .left {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-image: url("../imgs/img04.png");
+    background-position: 40%;
+    background-size: cover;
+    opacity: 80%;
+    margin: 0 5% 0 0;
+}
+
+#dialog {
+    display: flex;
+    overflow: hidden;
+    width: 40rem;
+    height: 30rem;
+    position: absolute;
+    background-color: rgba(255,255,255,70%);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 20%);
+    color: rgba(95, 95, 95, 88%);
+    margin: 12% 0 0 44%;
+    z-index: 1;
+    font-size: 20px;
+    padding: 13rem 0 0 1rem;
+    display: none;
+}

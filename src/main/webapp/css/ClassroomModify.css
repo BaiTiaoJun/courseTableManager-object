@@ -1,0 +1,67 @@
+.infoPage .right .in {
+    outline: none;
+    width: 70%;
+    height: 7rem;
+    font-size: 2rem;
+    margin-top: 4rem;
+    padding: 3.5rem 0 0 1.6rem;
+    border: none;
+    border-bottom: 1px solid rgb(144,129,241);
+    background-color: rgba(0,0,0,0);
+}
+
+.infoPage .right .isMul {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.infoPage .right .isUse {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#false {
+    margin: 8rem 0 0 11%;
+}
+
+#use {
+    margin: 8rem 0 0 12%;
+}
+
+#inuse {
+    margin: 8rem 0 0 8%;
+}
+
+.right .submitClassroom {
+    width: 25%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 11rem 0 0 11%;
+    cursor: pointer;
+}
+
+.right .reset {
+    width: 25%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 0 0 0 15%;
+    cursor: pointer;
+}
+
+.right .submitClassroom:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.right .reset:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}

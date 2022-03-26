@@ -1,0 +1,104 @@
+.header .return {
+    border: none;
+    width: 6%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0 92%;
+    padding: 1rem 0 -1rem 1.5rem;
+    border-radius: 0.8rem;
+    color: #f6f6f6;
+    background-color: #78a4ff;
+    position: absolute;
+    cursor: pointer;
+}
+
+.header .return:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.box {
+    display: flex;
+    overflow: hidden;
+    width: 90rem;
+    height: 55rem;
+    background-color: rgba(255,255,255,50%);
+    border-radius: 1.5rem;
+    margin: 10% auto;
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 20%);
+    position: relative;
+}
+
+.box .table {
+    position: absolute;
+    width: 60%;
+    height: 50rem;
+    flex-direction: column;
+    margin: 5rem 0 0 30%;
+    text-align: center;
+}
+
+.box .table h4 {
+    color: rgb(144,129,241);
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.box .table .in {
+    outline: none;
+    width: 50%;
+    height: 5rem;
+    font-size: 2.6rem;
+    padding: 2rem 0 0 1.6rem;
+    border: none;
+    border-bottom: 1px solid rgb(144,129,241);
+    background-color: rgba(0,0,0,0);
+}
+
+.box .table #one {
+    width: 53%;
+}
+
+.box .table #two {
+    width: 53%;
+}
+
+.in:focus {
+    outline: none;
+    color: rgb(144,129,241);
+    padding: 1rem 0 0 1.6rem;
+}
+
+.submit {
+    width: 22%;
+    height: 4rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin: 6rem 0 0 0;
+    transform: translateX(-60%);
+    cursor: pointer;
+}
+
+.submit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+#dialog {
+    display: flex;
+    overflow: hidden;
+    width: 40rem;
+    height: 30rem;
+    background-color: rgba(255,255,255,70%);
+    border-radius: 1.5rem;
+    margin: 10% auto;
+    box-shadow: 0 0 1rem 0.2rem rgba(0 0 0 / 20%);
+    color: #5a5a5aeb;
+    z-index: 1;
+    font-size: 20px;
+    padding: 13rem 0 0 1rem;
+    display: none;
+}
